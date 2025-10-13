@@ -84,6 +84,13 @@
             @media screen and (max-width: 800px)
                 font-size: 1em
                 padding-bottom: 20px
+
+            @media screen and (max-width: 680px)
+                font-size: 0.8em
+                padding-bottom: 20px
+            @media screen and (max-width: 560px)
+                font-size: 0.6em
+                padding-bottom: 20px
     $duration: 20s
     .ticker-wrapper__first-half, .ticker-wrapper__second-half 
         display: flex
