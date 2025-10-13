@@ -67,19 +67,17 @@ function changeAKSkin(counter){
 <template>
     <header class="header">
         <h1 class="header-title">Аналитика рынка CS 2</h1>
-        
-            <div class="header-img"> 
-                <div class="img-container">
-                    <transition name="changeGun"><img :key="akSkinLink" class="header-img__item" :src="akSkinLink"  alt="ak-skin"></transition>
-                </div> 
-                <div class="img-container">
-                    <transition name="changeGun"><img :key="awpSkinLink" class="header-img__item" :src="awpSkinLink" alt="awp-skin"></transition>
-                </div>
-                <div class="img-container">
-                    <transition name="changeGun"><img :key="m4SkinLink" class="header-img__item" :src="m4SkinLink" alt="m4a1s-skin"></transition>
-                </div>
+        <div class="header-img"> 
+            <div class="img-container">
+                <transition name="changeGun"><img :key="akSkinLink" class="header-img__item" :src="akSkinLink"  alt="ak-skin"></transition>
+            </div> 
+            <div class="img-container">
+                <transition name="changeGun"><img :key="awpSkinLink" class="header-img__item" :src="awpSkinLink" alt="awp-skin"></transition>
             </div>
-        
+            <div class="img-container">
+                <transition name="changeGun"><img :key="m4SkinLink" class="header-img__item" :src="m4SkinLink" alt="m4a1s-skin"></transition>
+            </div>
+        </div>
     </header>
 </template>
 
@@ -94,6 +92,7 @@ function changeAKSkin(counter){
     flex-direction: column
     align-items: center
     justify-content: center
+    overflow: hidden
     @media screen and (max-width: 1240px)
         min-width: 100vw
         height: 60vh
@@ -102,6 +101,7 @@ function changeAKSkin(counter){
     position: absolute
     margin-bottom: 20vh
     z-index: 2
+    word-break: break-all
     @media screen and (max-width: 1600px)
         font-size: 5.5em
     @media screen and (max-width: 1100px)
@@ -116,11 +116,9 @@ function changeAKSkin(counter){
     justify-content: space-evenly
     align-items: center
     z-index: 3
-    margin-top: 45vh
-    overflow: hidden
+    margin-top: 20%
     @media screen and (max-width: 1600px)
         margin-top: 24vh
-
     &__item
         height: 70vh
         width: 30vw

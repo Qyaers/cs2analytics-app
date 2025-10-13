@@ -61,7 +61,6 @@
     height: 5vh
     width: 100%
     position: relative
-    overflow: hidden
     div.ticker-wrapper__first-half,.ticker-wrapper__second-half 
         display: flex
         flex-direction: row
@@ -70,27 +69,26 @@
         width: 100%
         height: 43px
         transform: translate(100%, 0)
+        padding-bottom: 10px
         p 
-            font-size: 2em
+            font-size: 1.85em
             text-transform: uppercase
             @media screen and (max-width: 1320px)
                 font-size: 1.6em
-                padding-bottom: 20px
-
             @media screen and (max-width: 1100px)
                 font-size: 1.2em
-                padding-bottom: 20px
+                padding-bottom: 10px
 
             @media screen and (max-width: 800px)
                 font-size: 1em
-                padding-bottom: 20px
+                padding-bottom: 10px
 
             @media screen and (max-width: 680px)
                 font-size: 0.8em
-                padding-bottom: 20px
+                padding-bottom: 10px
             @media screen and (max-width: 560px)
                 font-size: 0.6em
-                padding-bottom: 20px
+                padding-bottom: 10px
     $duration: 20s
     .ticker-wrapper__first-half, .ticker-wrapper__second-half 
         display: flex
