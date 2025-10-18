@@ -27,7 +27,7 @@ body
   height: 100vh
   overflow-x: hidden
 
-p,h1,h2
+p,h1,h2,a
   font-family: Roboto, sans-serif
   font-weight: bold
 p

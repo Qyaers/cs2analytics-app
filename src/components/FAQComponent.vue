@@ -13,7 +13,7 @@
                 </p>
             </div>
             <div class="answer" ref="answer">
-                <p>{{ faqItem.a}}</p>
+                <p>{{ faqItem.a}}<a v-show="faqItem.link" :href="faqItem.link">репозитории.</a></p>
                 <ul v-if="faqItem.hasOwnProperty('list')" v-for="item in faqItem.list">
                     <li>
                         {{item}}
@@ -55,8 +55,9 @@ export default {
                 },
 				{
 					q: `Откуда берутся данные?`,
-					a: `Все данные взяты напрямую с торговой площадки Steam. Парсер доступен в репозитории (https://github.com/PushinIlya/CS2-Analytics).`
-				}
+					a: `Все данные взяты напрямую с торговой площадки Steam. Парсер доступен в `,
+                    link: `https://github.com/PushinIlya/CS2-Analytics`
+                }
 			],
 		};
 	},
@@ -79,6 +80,8 @@ export default {
 		}
 	}
 }
+
+
 </script>
 <style lang="sass">
 .faq__container
