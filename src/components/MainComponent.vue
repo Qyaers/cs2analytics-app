@@ -1,21 +1,23 @@
 <script setup>
+import FAQComponent from './FAQComponent.vue';
 </script>
 <template>
     <main class="main">
         <div class="running-line ticker-wrapper">
 			<div class="ticker-wrapper__first-half">
-				<p>#исследуй тренды</p>
-				<p>#анализируй рынок</p>
-				<p>#принимай лучшее решение</p>
+				<p>#АНАЛИЗИРУЙ СОСТОЯНИЕ РЫНКА</p>
+				<p>#ОТСЛЕЖИВАЙ ДИНАМИКУ ЦЕН</p>
+				<p>#ИССЛЕДУЙ ТРЕНДЫ</p>
 			</div>
 			<div class="ticker-wrapper__second-half">
-				<p>#прогнозируй рост</p>
-				<p>#изучай цены</p>
-				<p>#находи аномалии</p>
+				<p>#ПРОГНОЗИРУЙ ПРИБЫЛЬ</p>
+				<p>#НАХОДИ ЛУЧШИЕ ИНВЕСТИЦИИ</p>
+				<p>#ПРИНИМАЙ РЕШЕНИЯ</p>
 			</div>
 		</div>
         <iframe class="iframe" title="cs2_market" src="https://app.powerbi.com/view?r=eyJrIjoiM2ZhNzVkNjgtMjFjNy00MWUxLWEzNmEtYjI5NzFlMzYxZjU3IiwidCI6ImI4MmQ2N2FmLWJmMGQtNGJjOS04Y2QxLWE0ZWQwZTBlMzVjOSIsImMiOjl9&pageName=ReportSection7eba521a22001b652321" frameborder="0" allowFullScreen="true" >
         </iframe>
+        <FAQComponent></FAQComponent>
     </main>
 </template>
 

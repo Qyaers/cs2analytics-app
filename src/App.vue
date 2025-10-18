@@ -29,7 +29,7 @@ body{
   overflow-x: hidden;
 }
 
-p,h1{
+p,h1,h2{
   font-family: Roboto, sans-serif;
   font-weight: bold;
 }
