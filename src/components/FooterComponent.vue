@@ -20,7 +20,7 @@ const currentYear = ref(new Date().getFullYear());
     background-color: #063159;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 20px;
 }
 

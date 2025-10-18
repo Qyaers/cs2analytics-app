@@ -74,6 +74,7 @@ import FAQComponent from './FAQComponent.vue';
         padding-bottom: 10px
         p 
             font-size: 1.85em
+            font-size: 2em
             text-transform: uppercase
             @media screen and (max-width: 1320px)
                 font-size: 1.6em

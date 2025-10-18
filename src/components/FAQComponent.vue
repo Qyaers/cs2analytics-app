@@ -1,5 +1,5 @@
 <template>
-	<div id="faq" class="faq__container container">
+	<div id="faq" class="faq__container">
     <div class="faq__about-project">
         <h2 class="about-project__title">Проект</h2>
         <p class="about-project__text">Аналитический дашборд для изучения рынка предметов Counter Strike 2</p>
@@ -16,7 +16,7 @@
                 <p>{{ faqItem.a}}</p>
                 <ul v-if="faqItem.hasOwnProperty('list')" v-for="item in faqItem.list">
                     <li>
-                    {{item}}
+                        {{item}}
                     </li>
                 </ul>
             </div>
@@ -47,9 +47,12 @@ export default {
 				},
 				{
 					q: `Что означают эти графики и показатели?`,
-					a:
-						`История продаж: динамика средней цены в руб. на предмет в разрезе дней, месяцев, кварталов и лет.Топ-100 предметов по прибыли: топ самых прибыльных предметов по формулам “Макс цена продажи за период” / “Мин цена продажи за период” и “Макс цена продажи за период” / “Средняя цена продажи за период”.Топ-100 предметов по росту/снижению цены: топ предметов по росту/снижению цены за последние 7/30/365 дней.`
-				},
+                    list:[
+                        `История продаж: динамика средней цены в руб. на предмет в разрезе дней, месяцев, кварталов и лет`,
+						`Топ-100 предметов по прибыли: топ самых прибыльных предметов по формулам “Макс цена продажи за период” / “Мин цена продажи за период” и “Макс цена продажи за период” / “Средняя цена продажи за период”`,
+						`Топ-100 предметов по росту/снижению цены: топ предметов по росту/снижению цены за последние 7/30/365 дней`,
+                    ]    
+                },
 				{
 					q: `Откуда берутся данные?`,
 					a: `Все данные взяты напрямую с торговой площадки Steam. Парсер доступен в репозитории (https://github.com/PushinIlya/CS2-Analytics).`
@@ -83,7 +86,7 @@ export default {
     flex-direction: column
     flex-shrink: 0
     flex-wrap: wrap
-    width: 80%
+    width: 80vw
     padding-bottom: 4vh
     padding-top: 4vh
 .faq
@@ -96,6 +99,8 @@ export default {
 .about-project
     &__title
         padding-bottom:10px
+    &__text
+        font-size: 1.25em
 
 .question
     display: flex
@@ -126,7 +131,7 @@ export default {
             font-size: 0.825em
             padding: 10px	
 .question:hover
-    background: rgba(27, 128, 176, 0.2)
+    background: rgba(#1F5283, 0.2)
 
 .question:active
     transform: translateY(4px)
@@ -140,7 +145,20 @@ export default {
 .question:has(+ .answer:not([style*="height: 0"]))
     border-bottom-left-radius: 0
     border-bottom-right-radius: 0
-
+li
+    font-family: Roboto,sans-serif
+    font-size: 1.25em
+    font-style: normal
+    font-weight: 700
+    line-height: 1.5em
+    @media screen and (max-width: 1200px)
+    font-size: 1.2em
+    @media screen and (max-width: 800px)
+    font-size: 1em
+    @media screen and (max-width: 600px)
+    font-size: 1.5em
+    @media screen and (max-width: 400px)
+    font-size: 2em
 .answer 
     transition: 0.25s
     height: 0
@@ -150,8 +168,8 @@ export default {
     border-bottom-right-radius: 15px
     border-bottom-left-radius: 15px
     p,ul,li,span
-        margin: 0
         list-style-type: disc
+        word-break: break-all
     p
         font-size: 1.25em
         padding: 5px 20px 5px 20px
@@ -164,6 +182,7 @@ export default {
             font-size: 1em
             padding-right: 20px
     li
+        padding: 20px
         font-size: 1.25em
         @media screen and (max-width: 1680px)
             font-size: 1.15em
@@ -180,7 +199,7 @@ h2
     font-weight: bold
     display: inline-block
     line-height: 0.5
-    color: #666
     margin-top: 15px
     padding-right: 20px
+
 </style>
