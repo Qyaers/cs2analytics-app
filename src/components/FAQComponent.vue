@@ -172,8 +172,7 @@ li
     border-bottom-left-radius: 15px
     p,ul,li,span
         list-style-type: disc
-        word-break: break-all
-    p
+        overflow-wrap: break-word
         font-size: 1.25em
         padding: 5px 20px 5px 20px
         @media screen and (max-width: 1680px)
@@ -183,6 +182,12 @@ li
             padding-right: 20px
         @media screen and (max-width: 800px)
             font-size: 1em
+            padding-right: 20px
+        @media screen and (max-width: 600px)
+            font-size: 0.8em
+            padding-right: 20px
+        @media screen and (max-width: 450px)
+            font-size: 0.5em
             padding-right: 20px
     li
         padding: 20px

@@ -44,7 +44,6 @@ import FAQComponent from './FAQComponent.vue';
         @media screen and (max-width: 1500px)
             width: 74vw
             height: 82.5vh
-
         @media screen and (max-width: 1400px)
             width: 82vw
             height: 84vh
@@ -59,6 +58,15 @@ import FAQComponent from './FAQComponent.vue';
         @media screen and (max-width: 820px)
             width: 84vw
             height: 55vh
+        @media screen and (max-width: 750px)
+            width: 85vw
+            height: 50vh
+        @media screen and (max-width: 482px)
+            width: 95vw
+            height: 40vh
+        @media screen and (max-width: 325px)
+            width: 95vw
+            height: 29vh
 .running-line 
     height: 5vh
     width: 100%

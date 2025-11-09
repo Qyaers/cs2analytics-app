@@ -66,7 +66,7 @@ function changeAKSkin(counter){
 
 <template>
     <header class="header">
-        <h1 class="header-title">Аналитика рынка CS 2</h1>
+        <h1 class="header-title">Аналитика рынка CS2</h1>
         <div class="header-img"> 
             <div class="img-container">
                 <transition name="changeGun"><img :key="akSkinLink" class="header-img__item" :src="akSkinLink"  alt="ak-skin"></transition>
@@ -111,6 +111,8 @@ function changeAKSkin(counter){
         font-size: 3.5em
     @media screen and (max-width: 720px)
         font-size: 2.5em
+    @media screen and (max-width: 450px)
+        font-size: 1.8em
 .header-img
     display: flex
     justify-content: space-evenly
@@ -132,7 +134,6 @@ h1
     color: #9AD6FB
     font-family: Roboto,sans-serif
     font-weight: bold
-    font-size: 9em
     text-shadow:  20px 5px 11px rgba(0, 0, 0, 0.589)
 
 .img-container
@@ -160,6 +161,10 @@ h1
     font-weight: bold
     font-size: 9em
     text-shadow: 20px 5px 11px rgba(0, 0, 0, 0.589)
+    @media screen and (max-width: 800px)
+        font-size: 7.5em
+    @media screen and (max-width: 400px)
+        font-size: 3em
 
 .changeGun-enter-active,
 .changeGun-leave-active
