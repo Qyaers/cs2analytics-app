@@ -1,6 +1,8 @@
 <script setup>
-import { ref } from 'vue';
-const currentYear = ref(new Date().getFullYear());
+import { computed } from 'vue';
+const currentYear = new Date().getFullYear();
+const yearText = computed(()=> currentYear == "2025"? "2025": `2025 - ${currentYear}`); 
+
 </script>
 
 
@@ -8,20 +10,18 @@ const currentYear = ref(new Date().getFullYear());
 <template>
     <footer class="footer">
         <div class="footer__text"><p>Galaxy Studios</p></div>
-        <div class="footer__text"><p>© {{ currentYear }}</p></div>
+        <div class="footer__text"><p>© {{ yearText }}</p></div>
     </footer>
 </template>
 
-<style>
-.footer{
-    width: 100%;
-    height: 100%;
-    height: 10vh;
-    background-color: #063159;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 20px;
-}
-
+<style lang="sass">
+.footer
+    width: 100%
+    min-height: 10vh
+    background-color: #063159
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    padding: 20px
+    position: relative
 </style>

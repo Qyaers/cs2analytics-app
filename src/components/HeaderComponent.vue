@@ -66,16 +66,16 @@ function changeAKSkin(counter){
 
 <template>
     <header class="header">
-        <h1 class="header-title">Аналитика рынка CS2</h1>
-        <div class="header-img"> 
-            <div class="img-container">
-                <transition name="changeGun"><img :key="akSkinLink" class="header-img__item" :src="akSkinLink"  alt="ak-skin"></transition>
-            </div> 
-            <div class="img-container">
-                <transition name="changeGun"><img :key="awpSkinLink" class="header-img__item" :src="awpSkinLink" alt="awp-skin"></transition>
+        <h1 class="header__title">Аналитика рынка CS2</h1>
+        <div class="header__gallery">
+            <div class="header__item">
+                <transition name="changeGun"><img :key="akSkinLink" class="header__image" :src="akSkinLink"  alt="ak-skin"></transition>
             </div>
-            <div class="img-container">
-                <transition name="changeGun"><img :key="m4SkinLink" class="header-img__item" :src="m4SkinLink" alt="m4a1s-skin"></transition>
+            <div class="header__item">
+                <transition name="changeGun"><img :key="awpSkinLink" class="header__image" :src="awpSkinLink" alt="awp-skin"></transition>
+            </div>
+            <div class="header__item">
+                <transition name="changeGun"><img :key="m4SkinLink" class="header__image" :src="m4SkinLink" alt="m4a1s-skin"></transition>
             </div>
         </div>
     </header>
@@ -85,87 +85,82 @@ function changeAKSkin(counter){
 .header
     background-image: url("/assets/headerBG.webp")
     background-size: 100% 100%
-    baclground-repeat: no-repeat
-    height: 100vh
-    width: 100vw
+    background-repeat: no-repeat
+    height: 100%
+    width: 100%
     display: flex
     flex-direction: column
     align-items: center
     justify-content: center
+    position: relative
     overflow: hidden
+
     @media screen and (max-width: 1240px)
+        height: 50vh
+
+    &__title
+        position: absolute
+        margin-bottom: 20vh
+        z-index: 2
+        word-break: break-all
+        color: #9AD6FB
+        font-family: Roboto, sans-serif
+        font-weight: bold
+        text-shadow: 20px 5px 11px rgba(0, 0, 0, 0.589)
+        font-size: 9em
+        text-align: center
+
+        @media screen and (max-width: 1600px)
+            font-size: 5.5em
+
+        @media screen and (max-width: 1100px)
+            margin-bottom: 0
+            font-size: 4.5em
+
+        @media screen and (max-width: 880px)
+            font-size: 3.5em
+
+        @media screen and (max-width: 800px)
+            font-size: 3.5em // Твоё значение из кода
+
+        @media screen and (max-width: 720px)
+            font-size: 2.5em
+
+        @media screen and (max-width: 450px)
+            font-size: 1.8em
+
+        @media screen and (max-width: 400px)
+            font-size: 1.6em
+
+    &__gallery
         min-width: 100vw
-        height: 60vh
-        background-size: 100% 100%
-.header-title
-    position: absolute
-    margin-bottom: 20vh
-    z-index: 2
-    word-break: break-all
-    @media screen and (max-width: 1600px)
-        font-size: 5.5em
-    @media screen and (max-width: 1100px)
-        margin-bottom: 0
-        font-size: 4.5em
-    @media screen and (max-width: 880px)
-        font-size: 3.5em
-    @media screen and (max-width: 720px)
-        font-size: 2.5em
-    @media screen and (max-width: 450px)
-        font-size: 1.8em
-.header-img
-    display: flex
-    justify-content: space-evenly
-    align-items: center
-    z-index: 3
-    margin-top: 20%
-    @media screen and (max-width: 1600px)
-        margin-top: 24vh
+        height: 100%
+        display: flex
+        justify-content: space-evenly
+        align-items: center
+        z-index: 3
+        margin-top: 20%
+
+        @media screen and (max-width: 1600px)
+            margin-top: 24vh
+
     &__item
         height: 70vh
         width: 30vw
-        object-fit: contain
-        margin: 0
-        padding: 0
+        display: flex
+        justify-content: center
+        align-items: center
+
         @media screen and (max-width: 1600px)
             height: 50vh
             width: 30vw
-h1
-    color: #9AD6FB
-    font-family: Roboto,sans-serif
-    font-weight: bold
-    text-shadow:  20px 5px 11px rgba(0, 0, 0, 0.589)
 
-.img-container
-    position: relative
-    width: 30vw
-    height: 70vh
-    display: flex
-    justify-content: center
-    align-items: center
-    @media screen and (max-width: 1600px)
-        height: 50vh
-        width: 30vw
-
-.header-img__item
-    position: absolute
-    height: 100%
-    width: 100%
-    object-fit: contain
-    margin: 0
-    padding: 0
-
-h1
-    color: #9AD6FB
-    font-family: Roboto, sans-serif
-    font-weight: bold
-    font-size: 9em
-    text-shadow: 20px 5px 11px rgba(0, 0, 0, 0.589)
-    @media screen and (max-width: 800px)
-        font-size: 7.5em
-    @media screen and (max-width: 400px)
-        font-size: 3em
-
+    &__image
+        width: 100%
+        height: 100%
+        object-fit: contain
+        padding: 0
+        margin: 0
 .changeGun-enter-active,
 .changeGun-leave-active
     transition: all 0.2s ease
@@ -177,11 +172,11 @@ h1
     transition: all 0.2s ease
 
 .changeGun-enter-from
-    transform: translateY(20px)
+    transform: translateX(20px)
     opacity: 0
 
 .changeGun-leave-to
-    transform: translateY(-20px)
+    transform: translateX(-20px)
     opacity: 0
 
 </style>
