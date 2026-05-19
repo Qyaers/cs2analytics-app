@@ -32,8 +32,8 @@ const awpSkinsArray = [
 ];
 
 setInterval(changeAKSkin,2520,counterAk,akSkinsArray);
-setInterval(changeAWPSkin,4220,counterAWP,awpSkinsArray);
-setInterval(changeM4Skin,3520,counterM4,m4SkinsArray);
+setInterval(changeAWPSkin,2520,counterAWP,awpSkinsArray);
+setInterval(changeM4Skin,2520,counterM4,m4SkinsArray);
 
 function changeM4Skin(counter,m4SkinsArray){
     counter.value++;
@@ -100,7 +100,8 @@ function changeAKSkin(counter){
 
     &__title
         position: absolute
-        margin-bottom: 20vh
+        top: 40%
+        will-change: transform
         z-index: 2
         word-break: break-all
         color: #9AD6FB
@@ -163,15 +164,13 @@ function changeAKSkin(counter){
         margin: 0
 
 .changeGun-enter-active
-    transition: all 1s ease
+    transition: all 0.4s ease
     opacity: 0
     position: absolute
-
 .changeGun-leave-active
-    transition: all 0.2s ease
+    transition: all 0.4s ease
 
 .changeGun-enter-from
-    transition: all 0.2s ease
     transform: translateX(-20px)
     opacity: 0
 

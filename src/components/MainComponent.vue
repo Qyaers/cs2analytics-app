@@ -129,7 +129,7 @@ $duration: 20s
                 font-size: 0.44em
 
     &__second-half
-        animation-delay: $duration / 2
+        animation-delay:  calc($duration / 2)
 
     @keyframes ticker
         0%
