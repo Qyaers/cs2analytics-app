@@ -32,8 +32,8 @@ const awpSkinsArray = [
 ];
 
 setInterval(changeAKSkin,2520,counterAk,akSkinsArray);
-setInterval(changeAWPSkin,2520,counterAWP,awpSkinsArray);
-setInterval(changeM4Skin,2520,counterM4,m4SkinsArray);
+setInterval(changeAWPSkin,3520,counterAWP,awpSkinsArray);
+setInterval(changeM4Skin,4520,counterM4,m4SkinsArray);
 
 function changeM4Skin(counter,m4SkinsArray){
     counter.value++;
@@ -86,7 +86,7 @@ function changeAKSkin(counter){
     background-image: url("/assets/headerBG.webp")
     background-size: 100% 100%
     background-repeat: no-repeat
-    height: 100%
+    min-height: 100%
     width: 100%
     display: flex
     flex-direction: column
@@ -97,7 +97,8 @@ function changeAKSkin(counter){
 
     @media screen and (max-width: 1240px)
         height: 50vh
-
+    @media (max-height: 380px)
+        height: 70vh
     &__title
         position: absolute
         top: 40%
@@ -110,6 +111,8 @@ function changeAKSkin(counter){
         text-shadow: 20px 5px 11px rgba(0, 0, 0, 0.589)
         font-size: 9em
         text-align: center
+        @media (max-height: 600px)
+            top: 35%
 
         @media screen and (max-width: 1600px)
             font-size: 5.5em
@@ -164,11 +167,11 @@ function changeAKSkin(counter){
         margin: 0
 
 .changeGun-enter-active
-    transition: all 0.4s ease
+    transition: all 0.6s ease-in-out
     opacity: 0
     position: absolute
 .changeGun-leave-active
-    transition: all 0.4s ease
+    transition: all 0.6s ease-in-out
 
 .changeGun-enter-from
     transform: translateX(-20px)
@@ -177,4 +180,5 @@ function changeAKSkin(counter){
 .changeGun-leave-to
     transform: translateX(20px)
     opacity: 0
+
 </style>
